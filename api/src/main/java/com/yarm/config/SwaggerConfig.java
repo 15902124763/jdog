@@ -26,14 +26,14 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(buildApiInf())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.yarm.controller"))//要注释的接口名
+                .apis(RequestHandlerSelectors.basePackage("com.yarm.jdog.controller"))//要注释的接口名
                 .paths(PathSelectors.any())
                 .build();
     }
 
     private ApiInfo buildApiInf(){
         return new ApiInfoBuilder()
-                .title("java base")
+                .title("jdog base")
                 .description("detail to git")
                 .termsOfServiceUrl("https://github.com/15902124763/")
                 .contact(new Contact("yarm", "", "15902124763@163.com"))
