@@ -33,7 +33,24 @@
     <commons.lang.version>2.6</commons.lang.version>
     <io.springfox-version>2.9.2</io.springfox-version>
     <org.projectlombok-version>1.18.6</org.projectlombok-version>
+    <maven.surefire.plugin.version>2.4.2</maven.surefire.plugin.version>
+
   </properties>
+
+  <!-- 阿里镜像 -->
+  <repositories>
+    <repository>
+      <id>alimaven</id>
+      <name>aliyun maven</name>
+      <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
 
   <dependencies>
     <dependency>
