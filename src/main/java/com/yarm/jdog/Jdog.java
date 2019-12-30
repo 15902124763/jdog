@@ -1,6 +1,7 @@
 package com.yarm.jdog;
 
 
+import com.yarm.jdog.command.GitClone;
 import com.yarm.jdog.listen.ConsoleListener;
 
 import java.util.Scanner;
@@ -21,6 +22,8 @@ public class Jdog {
 
     public static void listen(){
 
+        final GitClone gitClone = new GitClone();
+
         ConsoleListener cs = new ConsoleListener(new Scanner(System.in), new ConsoleListener.Action() {
 
             public void act(String msg) {
@@ -38,6 +41,16 @@ public class Jdog {
 
             public void act(String msg) {
                 System.out.println("Console: ...");
+            }
+        });
+
+        cs.addAction("git clone", new ConsoleListener.Action() {
+
+            public void act(String msg) {
+                System.out.println("Console: ...");
+                if("git clone".equalsIgnoreCase(msg)){
+                    gitClone.get();
+                }
             }
         });
         cs.listenInNewThread();
