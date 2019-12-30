@@ -1,5 +1,7 @@
 package com.yarm.jdog;
 
+import com.yarm.jdog.test.App;
+
 /**
  * @program: jdog
  * @description: main入口
@@ -8,6 +10,10 @@ package com.yarm.jdog;
  */
 public class Jdog {
     public static void main(String[] args) {
-        System.out.println("Im am ok");
+        System.out.println("begin");
+        System.out.println("begin");
+//        App app = new App();
+//        app.runTest(args);
+        System.out.println("end");
     }
 }

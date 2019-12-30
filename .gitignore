@@ -35,3 +35,6 @@ Thumbs.db
 
 # license check result
 license-list
+
+# projet ignore
+out/
